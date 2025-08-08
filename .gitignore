@@ -1,0 +1,36 @@
+# Logs
+logs
+*.log
+
+# dotenv environment variables file
+.env
+
+# Composer vendor directory
+# /vendor/
+
+# Sistema de cache ou temporários
+/cache/
+/tmp/
+/temp/
+
+# Arquivos de configuração locais
+config.local.php
+
+# Backups e arquivos temporários
+*.bak
+*.tmp
+*.swp
+
+# Arquivos de IDE
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+
+# Arquivos de sistema
+.DS_Store
+Thumbs.db
+
+# Test coverage
+coverage/
+.phpunit.result.cache
