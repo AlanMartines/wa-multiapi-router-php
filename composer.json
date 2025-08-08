@@ -1,0 +1,8 @@
+{
+    "require": {
+        "guzzlehttp/guzzle": "^7.9",
+        "pear/http_request2": "^2.7",
+        "cboden/ratchet": "^0.4.4",
+        "textalk/websocket": "^1.5"
+    }
+}

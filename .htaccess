@@ -1,0 +1,10 @@
+RewriteEngine On
+
+# Bloqueia acesso ao diretório .git e seus arquivos
+RedirectMatch 404 /\.git
+
+# Opcional: bloqueie outros arquivos sensíveis
+<FilesMatch "^(\.env|\.gitlab-ci\.yml|\.gitignore|\.gitmodules|composer\.json|composer\.lock|package\.json|package-lock\.json|yarn\.lock)$">
+    Order allow,deny
+    Deny from all
+</FilesMatch>
