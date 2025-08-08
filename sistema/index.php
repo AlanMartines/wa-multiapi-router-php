@@ -10,116 +10,104 @@ ini_set('error_log', dirname(__FILE__) . '/error_log.txt');
 error_reporting(E_ALL);
 //
 
+require_once('../config.php');
 require_once('../Router.php');
 
 $router = new Router();
 
-//$source = $_GET['source'] ?? 'connectzap';
-$source = $_GET['source'] ?? 'lincoln';
-//$source = $_GET['source'] ?? 'evolutionapi';
+$source = SOURCES;
 
 switch ($source) {
-    case 'connectzap':
-
-        break;
-    case 'lincoln':
+    case 'evolutionapi':
         // Instance - ✔️
-        require_once('../routes/lincoln/Start.php');
-        require_once('../routes/lincoln/Status.php');
-        require_once('../routes/lincoln/Logout.php');
+        require_once('../routes/evolutionapi/Start.php');
+        require_once('../routes/evolutionapi/Status.php');
+        require_once('../routes/evolutionapi/Logout.php');
         //
-        require_once('../routes/lincoln/restartToken.php');
-        require_once('../routes/lincoln/restoreAllToken.php');
-        require_once('../routes/lincoln/QRCode.php');
-        require_once('../routes/lincoln/getCode.php');
+        require_once('../routes/evolutionapi/restartToken.php');
+        require_once('../routes/evolutionapi/restoreAllToken.php');
+        require_once('../routes/evolutionapi/QRCode.php');
+        require_once('../routes/evolutionapi/getCode.php');
         //
         // Basic Functions (usage) - ✔️
-        require_once('../routes/lincoln/sendContactVcard.php');
+        require_once('../routes/evolutionapi/sendContactVcard.php');
         //
-        require_once('../routes/lincoln/sendVoiceBase64.php');
-        require_once('../routes/lincoln/sendVoiceFromBase64.php');
+        require_once('../routes/evolutionapi/sendVoiceBase64.php');
+        require_once('../routes/evolutionapi/sendVoiceFromBase64.php');
         //
-        require_once('../routes/lincoln/sendText.php');
-        require_once('../routes/lincoln/sendTextMult.php');
-        require_once('../routes/lincoln/sendTextMassa.php');
+        require_once('../routes/evolutionapi/sendText.php');
+        require_once('../routes/evolutionapi/sendTextMult.php');
+        require_once('../routes/evolutionapi/sendTextMassa.php');
         //
-        require_once('../routes/lincoln/sendImageUrl.php');
-        require_once('../routes/lincoln/sendImageBase64.php');
-        require_once('../routes/lincoln/sendImageFromBase64.php');
+        require_once('../routes/evolutionapi/sendImageUrl.php');
+        require_once('../routes/evolutionapi/sendImageBase64.php');
+        require_once('../routes/evolutionapi/sendImageFromBase64.php');
         //
-        require_once('../routes/lincoln/sendFileUrl.php');
-        require_once('../routes/lincoln/sendFileBase64.php');
-        require_once('../routes/lincoln/sendFileFromBase64.php');
-        require_once('../routes/lincoln/sendFileBase64Mult.php');
-        require_once('../routes/lincoln/sendFileBase64Massa.php');
+        require_once('../routes/evolutionapi/sendFileUrl.php');
+        require_once('../routes/evolutionapi/sendFileBase64.php');
+        require_once('../routes/evolutionapi/sendFileFromBase64.php');
+        require_once('../routes/evolutionapi/sendFileBase64Mult.php');
+        require_once('../routes/evolutionapi/sendFileBase64Massa.php');
         //
-        require_once('../routes/lincoln/sendList.php');
+        require_once('../routes/evolutionapi/sendList.php');
         //
-        require_once('../routes/lincoln/sendStickersUrl.php');
-        require_once('../routes/lincoln/sendStickersBase64.php');
-        require_once('../routes/lincoln/sendStickersFromBase64.php');
+        require_once('../routes/evolutionapi/sendStickersUrl.php');
+        require_once('../routes/evolutionapi/sendStickersBase64.php');
+        require_once('../routes/evolutionapi/sendStickersFromBase64.php');
         //
-        require_once('../routes/lincoln/sendPoll.php');
+        require_once('../routes/evolutionapi/sendPoll.php');
         //
         // Group Functions - ✔️
-        require_once('../routes/lincoln/sendContactVcardGrupo.php');
+        require_once('../routes/evolutionapi/sendContactVcardGrupo.php');
         //
-        require_once('../routes/lincoln/sendVoiceBase64Grupo.php');
-        require_once('../routes/lincoln/sendVoiceFromBase64Grupo.php');
+        require_once('../routes/evolutionapi/sendVoiceBase64Grupo.php');
+        require_once('../routes/evolutionapi/sendVoiceFromBase64Grupo.php');
         //
-        require_once('../routes/lincoln/sendTextGrupo.php');
+        require_once('../routes/evolutionapi/sendTextGrupo.php');
         //
-        require_once('../routes/lincoln/sendImageUrlGrupo.php');
-        require_once('../routes/lincoln/sendImageBase64Grupo.php');
-        require_once('../routes/lincoln/sendImageFromBase64Grupo.php');
+        require_once('../routes/evolutionapi/sendImageUrlGrupo.php');
+        require_once('../routes/evolutionapi/sendImageBase64Grupo.php');
+        require_once('../routes/evolutionapi/sendImageFromBase64Grupo.php');
         //
-        require_once('../routes/lincoln/sendFileUrlGrupo.php');
-        require_once('../routes/lincoln/sendFileBase64Grupo.php');
-        require_once('../routes/lincoln/sendFileFromBase64Grupo.php');
+        require_once('../routes/evolutionapi/sendFileUrlGrupo.php');
+        require_once('../routes/evolutionapi/sendFileBase64Grupo.php');
+        require_once('../routes/evolutionapi/sendFileFromBase64Grupo.php');
         //
-        require_once('../routes/lincoln/sendListGrupo.php');
-        require_once('../routes/lincoln/sendPollGrupo.php');
+        require_once('../routes/evolutionapi/sendListGrupo.php');
+        require_once('../routes/evolutionapi/sendPollGrupo.php');
         //
         // Group Options - ✔️
-        require_once('../routes/lincoln/leaveGroup.php');
-        require_once('../routes/lincoln/createGroup.php');
-        require_once('../routes/lincoln/updateGroupTitle.php');
-        require_once('../routes/lincoln/updateGroupDesc.php');
-        require_once('../routes/lincoln/getGroupInviteLink.php');
-        require_once('../routes/lincoln/getInfoGroup.php');
-        require_once('../routes/lincoln/getGroupMembers.php');
-        require_once('../routes/lincoln/settingGroup.php');
-        require_once('../routes/lincoln/setPictureGroup.php');
-        require_once('../routes/lincoln/addParticipant.php');
-        require_once('../routes/lincoln/removeParticipant.php');
-        require_once('../routes/lincoln/promoteParticipant.php');
-        require_once('../routes/lincoln/demoteParticipant.php');
+        require_once('../routes/evolutionapi/leaveGroup.php');
+        require_once('../routes/evolutionapi/createGroup.php');
+        require_once('../routes/evolutionapi/updateGroupTitle.php');
+        require_once('../routes/evolutionapi/updateGroupDesc.php');
+        require_once('../routes/evolutionapi/getGroupInviteLink.php');
+        require_once('../routes/evolutionapi/getInfoGroup.php');
+        require_once('../routes/evolutionapi/getGroupMembers.php');
+        require_once('../routes/evolutionapi/settingGroup.php');
+        require_once('../routes/evolutionapi/setPictureGroup.php');
+        require_once('../routes/evolutionapi/addParticipant.php');
+        require_once('../routes/evolutionapi/removeParticipant.php');
+        require_once('../routes/evolutionapi/promoteParticipant.php');
+        require_once('../routes/evolutionapi/demoteParticipant.php');
         //
         // Retrieving Data - ✔️
-        require_once('../routes/lincoln/getAllContacts.php');
-        require_once('../routes/lincoln/getAllGroups.php');
-        require_once('../routes/lincoln/checkNumberStatus.php');
+        require_once('../routes/evolutionapi/getAllContacts.php');
+        require_once('../routes/evolutionapi/getAllGroups.php');
+        require_once('../routes/evolutionapi/checkNumberStatus.php');
         //
         // Profile Functions - ✔️
-        require_once('../routes/lincoln/getProfileStatus.php');
-        require_once('../routes/lincoln/getProfilePicture.php');
-        require_once('../routes/lincoln/setProfilePicture.php');
-        require_once('../routes/lincoln/setProfileName.php');
-        require_once('../routes/lincoln/updateMyStatusOnline.php');
-        require_once('../routes/lincoln/setBlockUnblockContact.php');
+        require_once('../routes/evolutionapi/getProfileStatus.php');
+        require_once('../routes/evolutionapi/getProfilePicture.php');
+        require_once('../routes/evolutionapi/setProfilePicture.php');
+        require_once('../routes/evolutionapi/setProfileName.php');
+        require_once('../routes/evolutionapi/updateMyStatusOnline.php');
+        require_once('../routes/evolutionapi/setBlockUnblockContact.php');
         //
         // Getting webhook - ✔️
-        require_once('../routes/lincoln/getConfigWh.php');
-        require_once('../routes/lincoln/setConfigWh.php');
-
-
+        require_once('../routes/evolutionapi/getConfigWh.php');
+        require_once('../routes/evolutionapi/setConfigWh.php');
         //
-        break;
-    case 'evolutionapi':
-        require_once('../routes/evolutionapi/Start.php');
-
-
-
         break;
     default:
         http_response_code(400);

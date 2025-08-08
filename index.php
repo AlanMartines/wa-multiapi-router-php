@@ -21,7 +21,7 @@ function isSiteOnline($url) {
 }
 
 // URL que queremos testar
-$url = APIURLBND;
+$url = APIURL;
 
 // Validando
 if (isSiteOnline($url)) {
