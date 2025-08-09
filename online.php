@@ -51,7 +51,6 @@
     <div class="container">
         <h1>Sistema Online</h1>
         <p>O sistema está online e totalmente operante. Se precisar de ajuda, entre em contato com o suporte.</p>
-        <a href="mailto:contato@connectzap.com.br" class="btn">Contatar Suporte</a>
     </div>
 </body>
 </html>

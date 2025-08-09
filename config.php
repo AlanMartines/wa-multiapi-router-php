@@ -9,20 +9,12 @@ require_once __DIR__ . '/vendor/autoload.php';
 $dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
 $dotenv->load();
 
-/** pasta absoluta do sistema **/
-if (!defined('ABSPAST'))
-    define('ABSPAST', basename(__DIR__));
-
-/** caminho absoluto para a pasta do sistema **/
-if (!defined('ABSPATH'))
-    define('ABSPATH', dirname(__FILE__) . '/');
-
 /** API_TOKEN */
 if (!defined('ADMINTOKEN'))
-    define('ADMINTOKEN', $_ENV['ADMINTOKEN'] ?? '');
+    define('ADMINTOKEN', $_ENV['ADMINTOKEN'] ?? null);
 
 if (!defined('APIURL'))
-    define('APIURL', $_ENV['APIURL'] ?? '');
+    define('APIURL', $_ENV['APIURL'] ?? null);
 
 if (!defined('SOURCES'))
-    define('SOURCES', $_ENV['SOURCES'] ?? 'evolutionapi');
+    define('SOURCES', $_ENV['SOURCES'] ?? null);

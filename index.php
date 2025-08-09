@@ -1,5 +1,14 @@
 <?php
 //
+// Não exibir erros na tela
+ini_set('display_errors', 0);
+// Ativar o log de erros
+ini_set('log_errors', 1);
+// Definir onde o log será salvo
+ini_set('error_log', dirname(__FILE__) . '/error_log.txt');
+// Definir o nível de erros que serão reportados
+error_reporting(E_ALL);
+//
 require_once('./config.php');
 // Função para checar se o site está online
 function isSiteOnline($url) {

@@ -51,7 +51,6 @@
     <div class="container">
         <h1>Sistema Offline</h1>
         <p>Atualmente o sistema está indisponível. Estamos trabalhando para restabelecer o serviço o mais rápido possível.</p>
-        <a href="mailto:contato@connectzap.com.br" class="btn">Contatar Suporte</a>
     </div>
 </body>
 </html>
